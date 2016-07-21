@@ -1,0 +1,46 @@
+TEST_F(ElektaTask1, GlodUserwithOneLineShouldPay)
+{
+    ElektaAccount GlodUser(49.95,14.5);
+    float fGlodUserM = GlodUser.calculateMonthBill(1);
+    ASSERT_EQ(49.95,fGlodUserM);
+    
+}
+
+TEST_F(ElektaTask1, GlodUserwithTwoLineShouldPay)
+{
+    ElektaAccount GlodUser(49.95,14.5);
+    float fGlodUserM = GlodUser.calculateMonthBill(2);
+    ASSERT_EQ(49.95+14.5,fGlodUserM);
+    
+}
+TEST_F(ElektaTask1, GlodUserwithThreeLineShouldPay)
+{
+    ElektaAccount GlodUser(49.95,14.5);
+    float fGlodUserM = GlodUser.calculateMonthBill(3);
+    ASSERT_EQ(49.95+14.5*2,fGlodUserM);
+    
+}
+
+TEST_F(ElektaTask1, SilverUserwithOneLineShouldPay)
+{
+    ElektaAccount SilverUser(29.95,21.5);
+    float fSilverUserM = SilverUser.calculateMonthBill(1);
+    ASSERT_EQ(29.95,fGlodUserM);
+    
+}
+
+TEST_F(ElektaTask1, SilverUserwithTwoLineShouldPay)
+{
+    ElektaAccount SilverUser(29.95,21.5);
+    float fSilverUserM = SilverUser.calculateMonthBill(2);
+    ASSERT_EQ(29.95+21.5,fGlodUserM);
+    
+}
+
+TEST_F(ElektaTask1, SilverUserwithThreeLineShouldPay)
+{
+    ElektaAccount SilverUser(29.95,21.5);
+    float fSilverUserM = SilverUser.calculateMonthBill(3);
+    ASSERT_EQ(29.95+21.5*2,fGlodUserM);
+    
+}
